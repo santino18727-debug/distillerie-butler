@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Distillerie Butler — Eaux-de-vie de Serbie · Eau-de-vie de cidre de pomme</title>
+<meta name="description" content="Distillerie Butler 011 — eaux-de-vie de fruits distillées et embouteillées à Gornji Milanovac, en Šumadija (Serbie). Eau-de-vie de cidre de pomme, coing et fruits. Importées en Suisse. 42% vol." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════ PORTIQUE D'ÂGE (conformité vente d'alcool) ══════════ -->
+<div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+  <div class="age-gate__panel">
+    <div class="age-gate__logo" id="ageLogo" aria-hidden="true"></div>
+    <div class="age-gate__mark">DISTILLERIE BUTLER</div>
+    <div class="age-gate__rule"></div>
+    <p class="age-gate__eyebrow">Eaux-de-vie de Serbie · Importées en Suisse</p>
+    <h1 class="age-gate__title" id="ageTitle">Avez-vous l'âge légal<br>pour consommer de l'alcool&nbsp;?</h1>
+    <p class="age-gate__note">Ce site est réservé aux personnes majeures. En Suisse, la vente de spiritueux est autorisée dès 18&nbsp;ans.</p>
+    <div class="age-gate__actions">
+      <button class="btn btn--gold" id="ageYes">J'ai 18 ans ou plus</button>
+      <button class="btn btn--ghost" id="ageNo">Je n'ai pas l'âge</button>
+    </div>
+    <p class="age-gate__legal">L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
+  </div>
+</div>
+
+<!-- Refus d'accès -->
+<div class="age-deny" id="ageDeny" hidden>
+  <div class="age-deny__inner">
+    <p class="age-deny__eyebrow">Accès restreint</p>
+    <h2>Revenez lorsque vous aurez l'âge légal.</h2>
+    <p>La Distillerie Butler défend une consommation responsable. À bientôt.</p>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ══════════ EN-TÊTE ══════════ -->
+<header class="header" id="header">
+  <a href="#top" class="brand" aria-label="Distillerie Butler — accueil">
+    <span class="brand__logo" id="brandLogo" aria-hidden="true"></span>
+    <span class="brand__text">
+      <span class="brand__word">DISTILLERIE BUTLER</span>
+      <span class="brand__sub">Rakija · Serbie</span>
+    </span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#collection">La collection</a>
+    <a href="#procede">Le procédé</a>
+    <a href="#rakija">La rakija</a>
+    <a href="#maison">La maison</a>
+  </nav>
+  <div class="header__right">
+    <button class="cart-btn" id="cartBtn" aria-label="Ouvrir le panier">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 6h16l-1.5 11.5a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 6Z"/><path d="M8.5 6V5a3.5 3.5 0 0 1 7 0v1"/></svg>
+      <span class="cart-btn__count" id="cartCount">0</span>
+    </button>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ HÉRO ══════════ -->
+  <section class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow reveal">Gornji Milanovac · Šumadija, Serbie</p>
+        <h1 class="hero__title reveal">De la Serbie,<br><em>goutte à goutte</em>,<br>jusqu'à vous.</h1>
+        <p class="hero__lede reveal">Des eaux-de-vie de fruits distillées et embouteillées à la main en Šumadija, terre historique de la rakija — puis importées en Suisse. Notre signature&nbsp;: l'<em>eau-de-vie de cidre de pomme</em>, rare et lumineuse.</p>
+        <div class="hero__actions reveal">
+          <a href="#collection" class="btn btn--gold">Découvrir la collection</a>
+          <a href="#procede" class="btn btn--line">Notre savoir-faire</a>
+        </div>
+        <ul class="hero__marks reveal">
+          <li>Distillée en Serbie</li>
+          <li>Importée en Suisse</li>
+          <li>42% vol · 700 ml</li>
+        </ul>
+      </div>
+    </div>
+    <span class="hero__caption">Eau-de-vie de cidre de pomme · Millésime 2020</span>
+  </section>
+
+  <!-- ══════════ BANDEAU DÉFILANT ══════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>JABUKA — pomme</span><span>•</span><span>DUNJA — coing</span><span>•</span><span>ŠLJIVA — prune</span><span>•</span><span>KRUŠKA — poire</span><span>•</span><span>ŽIVELI !</span><span>•</span>
+      <span>JABUKA — pomme</span><span>•</span><span>DUNJA — coing</span><span>•</span><span>ŠLJIVA — prune</span><span>•</span><span>KRUŠKA — poire</span><span>•</span><span>ŽIVELI !</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- ══════════ MANIFESTE ══════════ -->
+  <section class="manifesto manifesto--img">
+    <p class="manifesto__text reveal">
+      Distiller le <span class="hl">cidre de pomme</span> plutôt que le moût&nbsp;: un choix rare, exigeant,
+      qui donne une eau-de-vie <em>fine et fruitée</em> là où d'autres cherchent la puissance.
+      C'est la manière Butler — <span class="hl">la pureté du fruit</span>, rien d'autre.
+    </p>
+  </section>
+
+  <!-- ══════════ COLLECTION ══════════ -->
+  <section class="section collection" id="collection">
+    <div class="section__head">
+      <p class="eyebrow reveal">La collection</p>
+      <h2 class="section__title reveal">Un verger,<br>plusieurs eaux-de-vie.</h2>
+      <p class="section__intro reveal">Chaque cuvée naît d'un seul fruit de Šumadija. Prix indicatifs en francs suisses, livraison offerte dès 3 bouteilles.</p>
+    </div>
+    <div class="grid" id="productGrid"><!-- injecté par JS --></div>
+    <p class="collection__disclaimer reveal">Gamme &amp; prix donnés à titre indicatif — à confirmer avec la distillerie.</p>
+  </section>
+
+  <!-- ══════════ BANDEAU CINÉMA · ALAMBIC ══════════ -->
+  <div class="band band--alambic reveal">
+    <div class="band__inner">
+      <span class="band__eyebrow">Le geste</span>
+      <p class="band__quote">Le cuivre, le feu, la patience.</p>
+    </div>
+  </div>
+
+  <!-- ══════════ PROCÉDÉ ══════════ -->
+  <section class="section procede" id="procede">
+    <div class="procede__intro">
+      <p class="eyebrow reveal">Le procédé</p>
+      <h2 class="section__title reveal">Du fruit<br>à la bouteille.</h2>
+      <p class="section__intro reveal">Pas d'arôme ajouté, pas de sucre, pas de raccourci. Seulement le fruit, la fermentation et le cuivre.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__num">01</span>
+        <h3>Le fruit</h3>
+        <p>Pommes, coings et prunes de Šumadija, récoltés à pleine maturité, quand le sucre atteint son sommet.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">02</span>
+        <h3>La fermentation</h3>
+        <p>Pour la pomme, le fruit devient d'abord cidre — un véritable vin de pomme — avant d'être distillé. C'est ce qui fait sa finesse.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">03</span>
+        <h3>La distillation</h3>
+        <p>Passage au chaudron de cuivre. Le distillateur ne garde que le cœur de chauffe, le plus pur, à 42% vol.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">04</span>
+        <h3>La mise en bouteille</h3>
+        <p>Embouteillée et étiquetée à la main à Gornji Milanovac, par lots numérotés, puis importée en Suisse.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ══════════ BANDEAU CINÉMA · FÛTS ══════════ -->
+  <div class="band band--futs reveal">
+    <div class="band__inner">
+      <span class="band__eyebrow">Le repos</span>
+      <p class="band__quote">Là où le temps fait son œuvre.</p>
+    </div>
+  </div>
+
+  <!-- ══════════ QU'EST-CE QUE LA RAKIJA ══════════ -->
+  <section class="section rakija" id="rakija">
+    <div class="rakija__grid">
+      <div class="rakija__copy">
+        <p class="eyebrow reveal">La rakija</p>
+        <h2 class="section__title reveal">L'âme des<br>Balkans, en verre.</h2>
+        <p class="reveal">La <strong>rakija</strong> est l'eau-de-vie de fruit traditionnelle des Balkans. En Serbie, elle ouvre chaque repas, scelle chaque accord et accompagne chaque fête. La Šumadija, où naissent nos eaux-de-vie, en est l'un des berceaux historiques.</p>
+        <p class="reveal">On la sert fraîche mais jamais glacée, dans un petit verre tulipe, à la fin d'une longue soirée. <em>Živeli</em> — à la vie.</p>
+        <dl class="facts reveal">
+          <div><dt>42%</dt><dd>degré d'alcool</dd></div>
+          <div><dt>700 ml</dt><dd>format bouteille</dd></div>
+          <div><dt>Serbie&nbsp;→&nbsp;CH</dt><dd>distillée puis importée</dd></div>
+        </dl>
+      </div>
+      <div class="rakija__ritual reveal">
+        <p class="ritual__label">Le rituel</p>
+        <ul>
+          <li><span>1</span> Verre tulipe, à température de cave (14–16°C).</li>
+          <li><span>2</span> On réchauffe le verre dans la paume.</li>
+          <li><span>3</span> On hume longuement avant la première gorgée.</li>
+          <li><span>4</span> On trinque les yeux dans les yeux — <em>Živeli&nbsp;!</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ORIGINE : SERBIE ↔ SUISSE ══════════ -->
+  <section class="awards">
+    <div class="awards__inner awards__inner--origin">
+      <div class="award reveal"><span class="award__mark">✦</span><strong>Distillée en Serbie</strong><em>Gornji Milanovac · Šumadija</em></div>
+      <div class="award reveal"><span class="award__mark">✦</span><strong>Embouteillée à la main</strong><em>Par lots numérotés</em></div>
+      <div class="award reveal"><span class="award__mark">✦</span><strong>Importée en Suisse</strong><em>M.R. Moravac · Burgdorf</em></div>
+      <div class="award reveal"><span class="award__mark">✦</span><strong>Sans additif</strong><em>Ni sucre ni arôme ajouté</em></div>
+    </div>
+  </section>
+
+  <!-- ══════════ BANDEAU CINÉMA · VERGER ══════════ -->
+  <div class="band band--verger reveal">
+    <div class="band__inner">
+      <span class="band__eyebrow">L'origine</span>
+      <p class="band__quote">Les vergers de Šumadija.</p>
+    </div>
+  </div>
+
+  <!-- ══════════ MAISON / VALEURS ══════════ -->
+  <section class="section maison" id="maison">
+    <div class="maison__grid">
+      <div class="maison__lead reveal">
+        <p class="eyebrow">La maison</p>
+        <h2 class="section__title">Un pont entre<br>la Serbie et la Suisse.</h2>
+      </div>
+      <div class="maison__body reveal">
+        <p>La <em>Distillerie Butler 011</em> distille et embouteille ses eaux-de-vie de fruits à Gornji Milanovac, au cœur de la Šumadija. Chaque bouteille est ensuite importée en Suisse pour rejoindre votre table — un savoir-faire serbe, une exigence helvétique.</p>
+        <div class="values">
+          <div><h4>Livraison en Suisse</h4><p>Offerte dès 3 bouteilles. Expédition rapide depuis Burgdorf.</p></div>
+          <div><h4>Édition par lots</h4><p>Chaque bouteille porte son millésime et son numéro de lot.</p></div>
+          <div><h4>Sans additif</h4><p>Aucun sucre, arôme ou colorant. Seulement le fruit.</p></div>
+          <div><h4>Coffrets cadeaux</h4><p>Assortiments de nos eaux-de-vie, sur demande.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ NEWSLETTER ══════════ -->
+  <section class="letter">
+    <div class="letter__inner reveal">
+      <p class="eyebrow">Le carnet de la maison</p>
+      <h2>Nouvelles cuvées, accords &amp; rituels.</h2>
+      <form class="letter__form" id="letterForm">
+        <input type="email" required placeholder="votre@email.ch" aria-label="Votre adresse e-mail" />
+        <button class="btn btn--gold" type="submit">Je m'abonne</button>
+      </form>
+      <p class="letter__note" id="letterNote">Une lettre par saison. Jamais de spam. Réservé aux majeurs.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ══════════ PIED DE PAGE ══════════ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <span class="brand__word">DISTILLERIE BUTLER</span>
+      <p>Eaux-de-vie de fruits · Gornji Milanovac, Šumadija — Serbie.</p>
+    </div>
+    <div class="footer__cols">
+      <div><h5>Boutique</h5><a href="#collection">La collection</a><a href="#collection">Coffrets</a><a href="#collection">Cartes cadeaux</a></div>
+      <div><h5>La maison</h5><a href="#procede">Le procédé</a><a href="#rakija">La rakija</a><a href="#maison">Notre histoire</a></div>
+      <div><h5>Contact</h5><a href="#">Livraison Suisse</a><a href="#">Nous contacter</a><a href="#">Mentions légales</a></div>
+    </div>
+  </div>
+  <div class="footer__legal-block">
+    <p><strong>Producteur&nbsp;:</strong> Distillerie Butler 011 DOO — Nikole Tesle 7, Leušići, 32308 Gornji Milanovac, Serbie.</p>
+    <p><strong>Importateur Suisse&nbsp;:</strong> M.R. Moravac — Kirchbergstr. 105, 3400 Burgdorf — 034 422 31 70.</p>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Distillerie Butler. Tous droits réservés.</p>
+    <p class="footer__legal">L'abus d'alcool est dangereux pour la santé — à consommer avec modération. Vente interdite aux mineurs.</p>
+  </div>
+</footer>
+
+<!-- ══════════ TIROIR PANIER ══════════ -->
+<div class="drawer-scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Panier">
+  <div class="drawer__head">
+    <h3>Votre panier</h3>
+    <button class="drawer__close" id="drawerClose" aria-label="Fermer">✕</button>
+  </div>
+  <div class="drawer__body" id="drawerBody"></div>
+  <div class="drawer__foot">
+    <div class="drawer__total"><span>Total</span><span id="drawerTotal">CHF 0.–</span></div>
+    <p class="drawer__ship" id="drawerShip"></p>
+    <button class="btn btn--gold btn--full" id="checkoutBtn">Passer commande</button>
+    <p class="drawer__note">Paiement sécurisé · Livraison offerte dès 3 bouteilles</p>
+  </div>
+</aside>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
